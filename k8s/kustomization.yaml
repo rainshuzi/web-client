@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- web-client-service.yaml
+- web-client-deployment.yaml
+- kustomization.yaml
+- web-client-claim2-persistentvolumeclaim.yaml
+- notused-persistentvolumeclaim.yaml
+- web-client-claim0-persistentvolumeclaim.yaml
+- web-client-claim1-persistentvolumeclaim.yaml
+- boilerplate-network-networkpolicy.yaml
+commonLabels:
+  app: tekton-squad-1-web-client
+  app.kubernetes.io/instance: tekton-squad-1-web-client-instance
+  app.kubernetes.io/name: tekton-squad-1-web-client
+images:
+- name: web-client
+  newName: quay.io/jian_ping_shu/next_js
+  newTag: 5916845210f0b838403d574d85d419bb8a3177a3
