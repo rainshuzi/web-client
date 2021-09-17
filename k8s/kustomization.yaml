@@ -3,7 +3,6 @@ kind: Kustomization
 resources:
 - web-client-service.yaml
 - web-client-deployment.yaml
-- kustomization.yaml
 - web-client-claim2-persistentvolumeclaim.yaml
 - notused-persistentvolumeclaim.yaml
 - web-client-claim0-persistentvolumeclaim.yaml
