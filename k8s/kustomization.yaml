@@ -8,6 +8,7 @@ resources:
 - web-client-claim0-persistentvolumeclaim.yaml
 - web-client-claim1-persistentvolumeclaim.yaml
 - boilerplate-network-networkpolicy.yaml
+- route.yaml
 commonLabels:
   app: tekton-squad-1-web-client
   app.kubernetes.io/instance: tekton-squad-1-web-client-instance
